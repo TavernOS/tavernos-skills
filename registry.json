@@ -1,0 +1,371 @@
+{
+  "version": "0.1.0",
+  "skills": [
+    {
+      "slug": "action-item-extractor",
+      "name": "Action Item Extractor",
+      "description": "Pulls action items, commitments, and to-dos from any text \u2014 meeting notes, emails, documents, or conversations. Use when user says \"pull out the action items\", \"what do I need to do\", \"extract tasks\", or \"who owns what\".",
+      "triggers": "pull out action items, what do I need to do, extract tasks, who owns what, to-do list from this, commitments"
+    },
+    {
+      "slug": "agenda-builder",
+      "name": "Agenda Builder",
+      "description": "Creates a structured meeting agenda from a topic, goal, or list of discussion points. Use when user says \"build an agenda\", \"agenda for\", \"meeting agenda\", or \"help me structure this meeting\".",
+      "triggers": "build an agenda, agenda for, meeting agenda, structure this meeting, plan the meeting"
+    },
+    {
+      "slug": "blog-writer",
+      "name": "Blog Writer",
+      "description": "Writes blog posts, articles, and long-form content pieces. Use when user says \"write a blog post\", \"write an article\", \"help me write about\", or asks for content for a website or publication.",
+      "triggers": "write a blog post, write an article, help me write about, content piece, long form, thought leadership"
+    },
+    {
+      "slug": "bottleneck-mapping",
+      "name": "Bottleneck Mapping",
+      "description": "Identifies and ranks the 3-5 workflows bleeding the most hours per week, with root cause, pain owner, and unblock path for each",
+      "triggers": "bottleneck mapping, bottlenecks, workflow ranking, hours lost analysis, rank workflows"
+    },
+    {
+      "slug": "chain-builder",
+      "name": "Chain Builder",
+      "description": "Connects multiple agents in sequence to complete a complex multi-part task. Use when a task clearly requires more than one specialist and output from one step feeds into the next.",
+      "triggers": "chain these together, do all of this, full workflow, end to end, from start to finish"
+    },
+    {
+      "slug": "client-intake",
+      "name": "Client Intake",
+      "description": "From a company name + website/docs URL, produces a kickoff brief \u2014 business summary, inferred tool stack, suspected pain points, and 8-10 discovery questions",
+      "triggers": "client intake, new client brief, kickoff brief, pre-call prep, prospect research"
+    },
+    {
+      "slug": "code-review",
+      "name": "Code Review",
+      "description": "Reviews code for bugs, security issues, performance problems, and style. Use when user shares code and asks for \"code review\", \"review this\", \"what's wrong with this code\", \"check my code\", or \"is this secure\".",
+      "triggers": "code review, review this code, what's wrong with this code, check my code, is this secure, debug this, find the bug"
+    },
+    {
+      "slug": "competitive-analysis",
+      "name": "Competitive Analysis",
+      "description": "Researches and analyzes competitors, alternatives, and the competitive landscape. Use when user says \"competitive analysis\", \"who are the competitors\", \"how do we compare\", \"what's the competition doing\", or \"market landscape\".",
+      "triggers": "competitive analysis, who are the competitors, how do we compare, what's the competition doing, market landscape, competitive intelligence, compare to"
+    },
+    {
+      "slug": "content-approval-pack",
+      "name": "Content Approval Pack",
+      "description": "Formats a weekly content batch into a client-facing approval doc \u2014 cover summary, drafts with checkboxes, feedback prompts, deadline",
+      "triggers": "approval pack, content approval, client approval, weekly approval, approval doc"
+    },
+    {
+      "slug": "content-batch-draft",
+      "name": "Content Batch Draft",
+      "description": "Weekly run skill \u2014 given Voice Profile + Content Pillars + this week's themes, produces 7-10 ready-to-post drafts across channels",
+      "triggers": "content batch, weekly content, draft content, content drafts, batch draft"
+    },
+    {
+      "slug": "content-discovery",
+      "name": "Content Discovery",
+      "description": "Kickoff scoping doc for a new Content Operations client \u2014 target audience, pillars, cadence, channels, metrics, and 10 follow-up questions",
+      "triggers": "content discovery, content brief, content kickoff, discovery brief, content scoping"
+    },
+    {
+      "slug": "content-monthly-report",
+      "name": "Content Monthly Report",
+      "description": "End-of-month Content Ops retainer report \u2014 exec summary, what shipped, what worked, recommendations, and retainer justification framing",
+      "triggers": "content monthly report, content retainer report, month end report, content recap, retention report"
+    },
+    {
+      "slug": "content-voice-profile",
+      "name": "Content Voice Profile",
+      "description": "From 10-30 samples of the client's existing content, produces a structured Voice Profile \u2014 reusable as a system prompt for downstream content skills",
+      "triggers": "voice profile, content voice, voice analysis, tone analysis, brand voice"
+    },
+    {
+      "slug": "copy-editing",
+      "name": "Copy Editing",
+      "description": "Edits writing for clarity, flow, grammar, and style without changing the author's voice. Use when user says \"edit this\", \"clean this up\", \"make this better\", \"proofread\", or shares a document for review.",
+      "triggers": "edit this, clean this up, make this better, proofread, copyedit, fix the writing, polish this"
+    },
+    {
+      "slug": "data-visualization",
+      "name": "Data Visualization",
+      "description": "Recommends and describes the right chart or visualization for any dataset and produces structured data to build it. Use when user mentions \"chart\", \"graph\", \"visualize\", \"plot this data\", or pastes raw numbers.",
+      "triggers": "chart, graph, visualize, plot this, show me a, what kind of chart, data viz, make a graph"
+    },
+    {
+      "slug": "decision-framework",
+      "name": "Decision Framework",
+      "description": "Builds structured frameworks for making complex decisions. Use when user says \"help me decide\", \"decision framework\", \"how should I think about this choice\", \"pros and cons\", or is stuck between options.",
+      "triggers": "help me decide, decision framework, how should I think about this choice, pros and cons, stuck between options, weigh the options, what should I do"
+    },
+    {
+      "slug": "deck-builder",
+      "name": "Deck Builder",
+      "description": "Builds slide deck outlines and slide-by-slide content for any presentation. Use when user mentions \"slide deck\", \"presentation\", \"slides\", \"PowerPoint\", \"pitch deck\", or \"build me a deck\".",
+      "triggers": "slide deck, presentation, slides, PowerPoint, pitch deck, build me a deck, deck"
+    },
+    {
+      "slug": "document-summarizer",
+      "name": "Document Summarizer",
+      "description": "Produces a concise, accurate summary of any document \u2014 reports, papers, articles, contracts, or emails. Use when user says \"summarize this\", \"give me the key points\", \"what's the TL;DR\", or shares a long document.",
+      "triggers": "summarize this, give me the key points, what's the TL;DR, summarize this document, what does this report say, brief me on this"
+    },
+    {
+      "slug": "documentation-writer",
+      "name": "Documentation Writer",
+      "description": "Writes technical documentation, user guides, README files, SOPs, and how-to content. Use when user says \"write documentation\", \"README\", \"user guide\", \"SOP\", \"how-to guide\", or \"document this process\".",
+      "triggers": "write documentation, README, user guide, SOP, how-to guide, document this process, technical docs"
+    },
+    {
+      "slug": "email-drafter",
+      "name": "Email Drafter",
+      "description": "Drafts professional emails for any situation \u2014 follow-ups, cold outreach, client updates, internal announcements, difficult conversations. Use when user says \"write an email\", \"draft this email\", \"help me email\", or describes an email they need to send.",
+      "triggers": "write an email, draft this email, help me email, send an email, email to, follow up email, cold email"
+    },
+    {
+      "slug": "executive-review-deck",
+      "name": "Executive Review Deck",
+      "description": "Produces a presentation deck for board or executive audiences \u2014 state of the business, key bets, asks and decisions \u2014 with data-backed narrative arc and explicit decision framing",
+      "triggers": "executive review deck, exec review, board deck, QBR deck, quarterly review, exec presentation, board presentation"
+    },
+    {
+      "slug": "executive-summary",
+      "name": "Executive Summary",
+      "description": "Writes executive summaries for reports, proposals, research, or any long document. Use when user says \"executive summary\", \"summarize for leadership\", \"one-pager\", \"TL;DR for executives\", or needs the key points pulled up front.",
+      "triggers": "executive summary, summarize for leadership, one-pager, TL;DR for executives, summary for the board, key points up front"
+    },
+    {
+      "slug": "fact-checker",
+      "name": "Fact Checker",
+      "description": "Verifies claims, statistics, and assertions in any document or argument. Use when user says \"fact check this\", \"is this accurate\", \"verify these numbers\", \"check the sources\", or shares content that needs verification.",
+      "triggers": "fact check this, is this accurate, verify these numbers, check the sources, is this true, source for this, can you verify"
+    },
+    {
+      "slug": "grill-me",
+      "name": "Grill Me",
+      "description": "Ruthless but constructive critique of any idea, pitch, plan, doc, or decision \u2014 pulls no punches but ends with a concrete rewrite path",
+      "triggers": "grill me, critique, roast, honest feedback, tear apart, rip into"
+    },
+    {
+      "slug": "integration-spec",
+      "name": "Integration Spec",
+      "description": "Companion document for any blueprint \u2014 plain-English description, required credentials, test procedure, failure modes, 5-step rollout checklist",
+      "triggers": "integration spec, blueprint spec, integration documentation, rollout checklist, blueprint companion"
+    },
+    {
+      "slug": "internal-ops-architecture",
+      "name": "Internal Ops Architecture",
+      "description": "From a scoped internal-ops workflow, produces end-to-end architecture \u2014 diagram, tool selection, data flow, error handling, rollout phasing",
+      "triggers": "ops architecture, workflow architecture, automation design, architecture diagram, workflow blueprint design"
+    },
+    {
+      "slug": "internal-ops-build-spec",
+      "name": "Internal Ops Build Spec",
+      "description": "From the architecture, produces the implementation spec \u2014 blueprint references, custom code, credentials, test plan, monitoring plan, estimated build hours",
+      "triggers": "internal ops build spec, build spec, implementation spec, build plan, ops implementation"
+    },
+    {
+      "slug": "internal-ops-discovery",
+      "name": "Internal Ops Discovery",
+      "description": "From the Pack 1 audit + bottleneck map OR fresh kickoff, identifies the 3 highest-ROI candidate workflows and scopes the first one for build",
+      "triggers": "internal ops discovery, workflow discovery, ops automation discovery, internal ops scoping, workflow candidate"
+    },
+    {
+      "slug": "internal-ops-handover",
+      "name": "Internal Ops Handover",
+      "description": "User-facing documentation for the client's team plus operator's runbook \u2014 produced after the build is live and Phase 3 is complete",
+      "triggers": "ops handover, workflow handover, handover doc, user documentation, runbook"
+    },
+    {
+      "slug": "internal-ops-monthly-report",
+      "name": "Internal Ops Monthly Report",
+      "description": "End-of-month across all active workflows for this client \u2014 uptime, runs processed, hours saved with math shown, issues hit, next workflow recommendation",
+      "triggers": "internal ops monthly report, ops retainer report, workflow monthly, ops month end, internal ops recap"
+    },
+    {
+      "slug": "lead-intel-approval",
+      "name": "Lead Intel Approval",
+      "description": "Formats the weekly lead batch into a client-facing delivery doc \u2014 Top 10 hottest section, grouped by trigger type and priority tier, ready to paste into CRM or email",
+      "triggers": "lead intel approval, lead delivery, weekly lead approval, lead batch delivery, client lead doc"
+    },
+    {
+      "slug": "lead-intel-discovery",
+      "name": "Lead Intel Discovery",
+      "description": "Kickoff scoping for a new Lead Intelligence client \u2014 ICP definition, signal taxonomy, source map, and 10 discovery questions",
+      "triggers": "lead intel discovery, lead intelligence discovery, ICP definition, lead scoping, signal taxonomy"
+    },
+    {
+      "slug": "lead-intel-monthly-report",
+      "name": "Lead Intel Monthly Report",
+      "description": "End-of-month Lead Intel report \u2014 pattern analysis, conversion data, source quality, ICP refinements, and next-month sourcing recommendations",
+      "triggers": "lead intel monthly report, monthly lead report, lead patterns, lead month end, lead retainer report"
+    },
+    {
+      "slug": "lead-intel-setup",
+      "name": "Lead Intel Setup",
+      "description": "Turns the Lead Intel discovery brief into a search query bank, monitoring schedule, data structure, and recommended tooling stack",
+      "triggers": "lead intel setup, lead monitoring setup, query bank, signal monitoring, lead infrastructure"
+    },
+    {
+      "slug": "lead-intel-weekly-batch",
+      "name": "Lead Intel Weekly Batch",
+      "description": "Weekly run skill \u2014 given raw signals/search results pasted in by operator, produces up to 50 warm leads with name, title, company, trigger, angle, and source link",
+      "triggers": "weekly batch, lead batch, lead intel batch, weekly leads, process signals"
+    },
+    {
+      "slug": "make-com-blueprint",
+      "name": "Make Blueprint (Make.com)",
+      "description": "Emits a Make.com scenario blueprint (JSON export format) from a workflow spec \u2014 modules configured, connections placeholders, inline annotations",
+      "triggers": "make.com blueprint, make blueprint, make.com scenario, make scenario, integromat, integromat blueprint"
+    },
+    {
+      "slug": "meeting-summarizer",
+      "name": "Meeting Summarizer",
+      "description": "Turns rough meeting notes or transcripts into a clean summary \u2014 decisions, action items with owners, open questions, and follow-ups",
+      "triggers": "summarize meeting, meeting notes, action items, recap, meeting summary"
+    },
+    {
+      "slug": "monthly-business-review",
+      "name": "Monthly Business Review",
+      "description": "Produces a structured monthly business review covering KPIs, revenue, costs, headcount, wins, risks, and forward look \u2014 with variance analysis against prior period and targets. When a workbook deliverable is requested, hands off to the generate_xlsx_report tool.",
+      "triggers": "monthly business review, MBR, monthly review, monthly report, business review, month-end review, build me the april numbers, variance workbook"
+    },
+    {
+      "slug": "n8n-blueprint",
+      "name": "Workflow Blueprint (n8n)",
+      "description": "Emits a runnable n8n workflow JSON blueprint from a workflow spec \u2014 nodes configured, credentials as placeholders, inline annotations",
+      "triggers": "n8n blueprint, n8n workflow, build n8n, n8n scenario, workflow blueprint, n8n json"
+    },
+    {
+      "slug": "ops-audit",
+      "name": "Ops Audit",
+      "description": "Maps a client's people, tools, handoffs, and data flows from ingested artifacts into a structured operational map",
+      "triggers": "ops audit, operational audit, workflow mapping, audit operations"
+    },
+    {
+      "slug": "pdf-analysis",
+      "name": "PDF Analysis",
+      "description": "Analyzes ingested PDFs and documents to extract key information, themes, data, and insights. Use when user mentions an ingested file, asks \"what does this say\", \"find in the document\", \"extract from\", \"key findings\", or \"summarize this PDF\".",
+      "triggers": "analyze this, what does this say, find in the document, extract from, key findings, what's in the file, summarize this PDF, pull out"
+    },
+    {
+      "slug": "plain-language",
+      "name": "Plain Language",
+      "description": "Rewrites complex, technical, or jargon-heavy text in plain English. Use when user says \"explain this simply\", \"translate this\", \"make this readable\", \"dumb this down\", or shares something that's hard to understand.",
+      "triggers": "explain this simply, translate this, make this readable, dumb this down, plain English, what does this mean, simplify"
+    },
+    {
+      "slug": "plan-builder",
+      "name": "Plan Builder",
+      "description": "Breaks any request into a clear multi-step plan and assigns each step to the right agent. Use when user asks \"plan this out\", \"how do I approach this\", \"figure out what needs to happen\", or describes a complex goal.",
+      "triggers": "plan this out, how do I approach, figure out what needs to happen, map this out, step by step"
+    },
+    {
+      "slug": "prioritized-playbook",
+      "name": "Prioritized Playbook",
+      "description": "Produces the full client-facing audit deliverable \u2014 exec summary, per-workflow detail with ROI math, build sequence, and Month 1 plan",
+      "triggers": "prioritized playbook, build playbook, implementation playbook, audit deliverable, final audit"
+    },
+    {
+      "slug": "proposal-writer",
+      "name": "Proposal Writer",
+      "description": "Writes a professional client proposal or business pitch \u2014 problem, approach, deliverables, timeline, pricing, next steps",
+      "triggers": "write a proposal, client proposal, business proposal, pitch, proposal draft, sow"
+    },
+    {
+      "slug": "report-formatter",
+      "name": "Report Formatter",
+      "description": "Formats raw data, findings, or analysis into a clean, professional report structure. Use when user says \"format this as a report\", \"turn this into a report\", \"make this look like a report\", or has analysis that needs to be packaged for an audience.",
+      "triggers": "format this as a report, turn this into a report, make this look like a report, package this up, formal report, monthly report, quarterly report"
+    },
+    {
+      "slug": "requirements-builder",
+      "name": "Requirements Builder",
+      "description": "Captures, structures, and formalizes business or technical requirements from conversations, interviews, or briefs. Use when user says \"gather requirements\", \"what do we need\", \"requirements for\", or \"help me spec this out\".",
+      "triggers": "gather requirements, what do we need, requirements for, help me spec this out, business requirements, technical requirements"
+    },
+    {
+      "slug": "risk-assessment",
+      "name": "Risk Assessment",
+      "description": "Identifies, evaluates, and mitigates risks for any plan, project, or decision. Use when user says \"what could go wrong\", \"risk assessment\", \"identify risks\", \"what are the risks\", or needs to pressure-test a plan.",
+      "triggers": "what could go wrong, risk assessment, identify risks, what are the risks, pressure test this, worst case scenario, risk register"
+    },
+    {
+      "slug": "skill-creator",
+      "name": "Skill Creator",
+      "description": "Builds a new TavernOS skill file on the fly \u2014 takes a purpose, picks the agent, drafts the frontmatter and body, saves as a proper .skill.md",
+      "triggers": "create a skill, build a skill, new skill, make a skill, skill file"
+    },
+    {
+      "slug": "spreadsheet-analyst",
+      "name": "Spreadsheet Analyst",
+      "description": "Analyzes spreadsheet data, builds formulas, interprets Excel files, and structures data for reporting. Use when user shares data, mentions \"Excel\", \"spreadsheet\", \"formula\", \"pivot table\", or asks to \"analyze these numbers\".",
+      "triggers": "Excel, spreadsheet, formula, pivot table, analyze these numbers, Google Sheets, data analysis, crunch these numbers"
+    },
+    {
+      "slug": "strategic-plan",
+      "name": "Strategic Plan",
+      "description": "Builds strategic plans, frameworks, and structured thinking documents. Use when user mentions \"strategy\", \"strategic plan\", \"how should we approach\", \"framework\", \"roadmap\", or \"big picture thinking\".",
+      "triggers": "strategy, strategic plan, how should we approach, framework, roadmap, big picture, long term plan, go to market, positioning"
+    },
+    {
+      "slug": "support-discovery",
+      "name": "Support Discovery",
+      "description": "Kickoff scoping doc for a new Support Automation client \u2014 top 10 issue types, current response patterns, documentation gaps, tone profile, and 10 discovery questions",
+      "triggers": "support discovery, support kickoff, support landscape, ticket analysis, support scoping"
+    },
+    {
+      "slug": "support-kb-builder",
+      "name": "Support KB Builder",
+      "description": "Produces a structured knowledge base from the discovery brief and raw content \u2014 articles ready for ingestion into the client's help tool",
+      "triggers": "support kb, kb builder, knowledge base, help articles, build kb, kb content"
+    },
+    {
+      "slug": "support-monthly-report",
+      "name": "Support Monthly Report",
+      "description": "End-of-month Support Automation retainer report \u2014 volume, auto-resolve rate, response time, CSAT trends, patterns, KB gaps, and next-month recommendations",
+      "triggers": "support monthly report, support retainer report, support month end, support recap, support retention report"
+    },
+    {
+      "slug": "support-response-library",
+      "name": "Support Response Library",
+      "description": "Builds a response template library from the top issue types \u2014 trigger keywords, recommended response text, personalization slots, escalation conditions",
+      "triggers": "response library, support templates, response templates, support library, canned responses"
+    },
+    {
+      "slug": "support-triage-runner",
+      "name": "Support Triage Runner",
+      "description": "The recurring triage skill \u2014 given a batch of incoming tickets, classifies each into auto-respond/needs-human/escalate-urgent and drafts responses in the client's voice",
+      "triggers": "support triage, triage tickets, ticket batch, process tickets, triage runner"
+    },
+    {
+      "slug": "system-design",
+      "name": "System Design",
+      "description": "Designs system architectures, technical structures, and complex system diagrams. Use when user says \"design the system\", \"architecture for\", \"how should this be built\", \"system design\", or asks about technical infrastructure.",
+      "triggers": "design the system, architecture for, how should this be built, system design, technical architecture, infrastructure, how do we structure this"
+    },
+    {
+      "slug": "task-decomposition",
+      "name": "Task Decomposition",
+      "description": "Breaks a large, vague, or complex task into clear manageable pieces. Use when a request is too broad, when the user seems overwhelmed, or when \"just do X\" would produce poor results without more structure.",
+      "triggers": "break this down, help me figure out, where do I start, this is too big, I'm not sure how to"
+    },
+    {
+      "slug": "tone-auditor",
+      "name": "Tone Auditor",
+      "description": "Analyzes the tone, voice, and emotional register of any piece of writing and flags mismatches. Use when user asks \"does this sound right\", \"is the tone right for\", \"does this come across well\", or \"will this land badly\".",
+      "triggers": "does this sound right, is the tone right, does this come across well, will this land badly, how does this read, tone check, voice check"
+    },
+    {
+      "slug": "web-research",
+      "name": "Web Research",
+      "description": "Conducts structured research on any topic, compiles findings, and presents with sources. Use when user says \"research this\", \"find information about\", \"what do we know about\", \"look into\", or needs background on a topic.",
+      "triggers": "research this, find information about, what do we know about, look into, background on, what's the current state of, investigate"
+    },
+    {
+      "slug": "write-prd",
+      "name": "Write PRD",
+      "description": "Generates a professional Product Requirements Document with problem framing, goals, user stories, requirements, success metrics, and rollout plan",
+      "triggers": "write a prd, product requirements, requirements document, draft prd, product spec"
+    }
+  ]
+}
