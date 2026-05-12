@@ -26,6 +26,22 @@ You will receive a `CURRENT CLIENT CONTEXT` block in your system prompt. If pres
 
 If the context is empty or slug is `_self`, produce a template proposal with clear placeholders. Still include the save-path line using `_self`.
 
+## Hard rule — the Next step section
+
+The `## Next step` section in the output template is the most common leak point: Woody sometimes falls back to `[TBD — one concrete next step the prospect can reply yes to]` when context is thin or the slug is `_self`. **This is the wrong behavior.** A proposal without a CTA is half a proposal.
+
+Override the ROUTER_SYSTEM `[TBD — what's needed]` rule for THIS section specifically:
+
+- The Next step section must contain one concrete CTA, never a placeholder.
+- When context allows, write a CTA tailored to the prospect's situation. Match the tone and specificity of these examples:
+  - **"Approve Option 2 and we can start Monday."**
+  - **"If this all looks right, sign below and we'll send kickoff details within 24 hours."**
+  - **"Reply with a green light on Option [N] and we'll have the contract in your inbox by [day]."**
+- When context is thin or the slug is `_self`, use this default verbatim:
+  > **"Reply with which option (1, 2, or 3) works for you, and we'll send the SOW + contract for signature."**
+
+This applies even when producing a template proposal for `_self` — the operator can edit a CTA they don't love, but they cannot edit a `[TBD]`.
+
 ## Inputs you can expect
 - Discovery call notes (ideally from `client-intake` or `meeting-summarizer`)
 - The prospect's company info and contact name
@@ -164,15 +180,8 @@ later.
 
 ## Next step
 
-[ONE action. Not "let's schedule a call to discuss." Something the
-prospect can say yes to in one click.]
-
-Examples (pick one based on the situation):
-- **"Reply with which option (1, 2, or 3) works for you, and we'll
-  send the SOW + contract for signature."**
-- **"Approve Option 2 and we can start Monday."**
-- **"If this all looks right, sign below and we'll send kickoff details
-  within 24 hours."**
+**"Reply with which option (1, 2, or 3) works for you, and we'll send
+the SOW + contract for signature."**
 
 ---
 
