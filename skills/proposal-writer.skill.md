@@ -4,6 +4,7 @@ trigger: write a proposal, client proposal, business proposal, pitch, proposal d
 description: Writes a professional client proposal or business pitch — problem, approach, deliverables, timeline, pricing, next steps
 agent: woody
 pack: proposals
+priority: core
 steps:
   - Understand the prospect and what they've asked for
   - Frame the problem from the prospect's point of view, not yours
@@ -26,6 +27,19 @@ You will receive a `CURRENT CLIENT CONTEXT` block in your system prompt. If pres
 
 If the context is empty or slug is `_self`, produce a template proposal with clear placeholders. Still include the save-path line using `_self`.
 
+## TavernOS service menu — canonical SKUs
+
+Your system prompt includes a `# TavernOS Service Menu` block listing every TavernOS engagement: name, price, timeline, format, who it's for. Use it as the authoritative source for what TavernOS sells.
+
+Hard rules:
+- Use SKU names verbatim — "Operational Audit", "Monthly Business Review", "Content Retainer". Do not paraphrase names.
+- Quote prices exactly as listed. Do not round, average, or invent new prices.
+- Do not propose SKUs that aren't in the menu. If a prospect needs something the menu doesn't cover, say so explicitly and offer the closest existing SKU or a `New Specialist` / `Custom Skill` engagement.
+- Match SKU to need from the menu's "Best for" line. If you're unsure which SKU fits, ask the operator rather than guessing.
+- Bundles, refreshes, and add-ons are listed under each SKU — use those exact names and amounts when relevant.
+
+If the menu block is missing from your system prompt (rare — only if skus.yaml failed to load), say so to the operator and pause rather than fabricating pricing.
+
 ## Hard rule — the Next step section
 
 The `## Next step` section in the output template is the most common leak point: Woody sometimes falls back to `[TBD — one concrete next step the prospect can reply yes to]` when context is thin or the slug is `_self`. **This is the wrong behavior.** A proposal without a CTA is half a proposal.
@@ -47,7 +61,7 @@ This applies even when producing a template proposal for `_self` — the operato
 - The prospect's company info and contact name
 - The specific problem they're trying to solve
 - Budget signals if the operator knows them
-- Your standard pricing / packaging for the service being proposed
+- Your standard pricing / packaging for the service being proposed (sourced from the TavernOS Service Menu in your system prompt)
 - Any case studies or prior-client results that are relevant
 
 ## Output format
