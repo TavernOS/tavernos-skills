@@ -1,0 +1,8 @@
+# OS noise
+.DS_Store
+
+# Local backups created by deploy scripts (kept on disk for recovery)
+*.bak.*
+
+# Transient tmp files from atomic-write workflows
+*.tmp.*
