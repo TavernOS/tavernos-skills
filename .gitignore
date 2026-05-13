@@ -6,3 +6,6 @@
 
 # Transient tmp files from atomic-write workflows
 *.tmp.*
+
+# OS cruft
+**/.DS_Store
