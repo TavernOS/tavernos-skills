@@ -9,3 +9,7 @@
 
 # OS cruft
 **/.DS_Store
+
+
+# Deploy-script .bak dirs (trap-armed deploys leave these in cooling-off; WA Deploy §5/§8)
+.deploy_baks_*/
