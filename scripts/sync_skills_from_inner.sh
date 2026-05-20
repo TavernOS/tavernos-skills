@@ -1,6 +1,10 @@
 # sync_skills_from_inner.sh
 # Generalized inner → outer skills/ sync. Auto-discovers what needs syncing.
 #
+# Discovers two file classes under skills/:
+#   - skills/*.skill.md       (top-level skill files; the canonical kind)
+#   - skills/_shared/*.md     (shared-resource infrastructure; new s52, P2-29)
+#
 # Behavior:
 #   - DRIFTED files (common but content differs)   → overwrite with backup
 #   - INNER-ONLY files (new in inner, not outer)   → create on outer
@@ -8,6 +12,7 @@
 #
 # Pre-flight gates: layout markers, outer repo clean in skills/.
 # Per-file atomic write, .bak.<TS> for overwrites, post-sync hash verify.
+# Parent dir auto-created on outer for nested paths (e.g. _shared/).
 # Single commit on outer, references inner HEAD. Does NOT push.
 # Idempotent: exits clean if nothing needs syncing.
 
@@ -54,8 +59,19 @@ echo
 # ============================================================
 echo "--- Phase 2: discover drift ---"
 
-INNER_FILES=$(cd "$INNER/skills" && ls *.skill.md 2>/dev/null | sort)
-OUTER_FILES=$(cd "$OUTER/skills" && ls *.skill.md 2>/dev/null | sort)
+# Discovery returns relative paths from $REPO/skills/, mixing two classes:
+#   bare filenames like              fact-checker.skill.md
+#   shared-resource relative paths   _shared/tavernos_confidence_tiers.md
+# Downstream code prefixes "$INNER/skills/$f" / "$OUTER/skills/$f" uniformly,
+# so both classes flow through the same per-file ops without further branching.
+INNER_FILES=$(cd "$INNER/skills" && {
+  ls *.skill.md 2>/dev/null
+  ls _shared/*.md 2>/dev/null
+} | sort)
+OUTER_FILES=$(cd "$OUTER/skills" && {
+  ls *.skill.md 2>/dev/null
+  ls _shared/*.md 2>/dev/null
+} | sort)
 
 OUTER_ONLY=$(comm -13 <(echo "$INNER_FILES") <(echo "$OUTER_FILES"))
 INNER_ONLY=$(comm -23 <(echo "$INNER_FILES") <(echo "$OUTER_FILES"))
@@ -114,6 +130,8 @@ if [ $N_DRIFTED -gt 0 ]; then
     backup_path="$outer_path.bak.$TS"
     tmp_path="$outer_path.tmp.$$"
 
+    mkdir -p "$(dirname "$outer_path")" \
+      || { echo "ABORT: parent dir create failed for $f"; exit 3; }
     cp "$outer_path" "$backup_path" \
       || { echo "ABORT: backup failed for $f"; exit 3; }
     cp "$inner_path" "$tmp_path" \
@@ -139,6 +157,8 @@ if [ $N_INNER_NEW -gt 0 ]; then
     tmp_path="$outer_path.tmp.$$"
 
     # No backup needed — outer file doesn't exist
+    mkdir -p "$(dirname "$outer_path")" \
+      || { echo "ABORT: parent dir create failed for new $f"; exit 3; }
     cp "$inner_path" "$tmp_path" \
       || { echo "ABORT: tmp write failed for new $f"; rm -f "$tmp_path"; exit 3; }
     mv "$tmp_path" "$outer_path" \
