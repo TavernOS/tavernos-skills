@@ -164,7 +164,7 @@ the root. For [Next Month], we're focused on [specific improvement] —
 if the pattern holds, auto-resolve rate should climb another [N]%."
 
 ---
-_Save this deliverable to:_ `clients/<slug>/deliverables/reports/support/monthly-report-[YYYY-MM].md`
+_Produce this deliverable by calling the **`generate_docx_report`** tool_ (Word document). Do NOT emit a `DELIVERABLE_SAVED` marker — the tool writes the file to `clients/<slug>/deliverables/reports/support/monthly-report-[YYYY-MM].docx` in the correct customer-facing format. (Markdown is rejected in this folder.)
 ```
 
 ## Tone & voice

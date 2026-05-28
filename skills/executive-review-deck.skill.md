@@ -88,10 +88,10 @@ approve, or discuss. Each ask is a single sentence with a clear
 yes/no or option-A/option-B shape. "Approve $2.4M add to GTM
 budget for H2" — not "discuss GTM investment."]
 
-**Emit this slide with `type: "closing"`** in the pptx spec — the gate
+**Emit this slide with `type: "closing"`** in the deck spec — the gate
 and the evaluator both anchor on a structural close. The `closing`
-slide type is the pptx native for asks/next-steps; the rubric's
-opening_closing dim explicitly wants a closing slide naming one action.
+slide type names asks/next-steps; the rubric's opening_closing dim
+explicitly wants a closing slide naming one action.
 
 ## Appendix slides (optional)
 - Detailed KPI scorecard (from MBR if available)
@@ -100,7 +100,7 @@ opening_closing dim explicitly wants a closing slide naming one action.
 - Supporting financial detail
 
 ---
-_Save this deliverable to:_ `clients/<slug>/deliverables/decks/exec-review-[period].pptx`
+_Produce this deliverable by calling the **`generate_html_deck`** tool_ with the slide sequence above (title / section / content / kpis / table / closing). Do NOT emit a `DELIVERABLE_SAVED` marker — the tool writes the deck to `clients/<slug>/deliverables/decks/exec-review-[period].html` and a PDF export is available from the deliverable card. (The `.pptx` path is retired — there is no PowerPoint generator; the HTML deck is the deck format.)
 ```
 
 ## Tone & voice

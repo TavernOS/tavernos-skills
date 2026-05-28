@@ -132,7 +132,7 @@ content approval. But the more you share, the sharper next week gets.
 
 _Companion file with full per-lead angles:_ `clients/<slug>/deliverables/reports/lead-intel/batch-[YYYY-WW].md`
 
-_Save this deliverable to:_ `clients/<slug>/deliverables/reports/lead-intel/approval-[YYYY-WW].md`
+_Produce this deliverable by calling the **`generate_html_report`** tool_ (HTML). Do NOT emit a `DELIVERABLE_SAVED` marker — the tool writes the file to `clients/<slug>/deliverables/reports/lead-intel/approval-[YYYY-WW].html` in the correct customer-facing format. (Markdown is rejected in this folder.)
 ```
 
 ## Formatting notes

@@ -118,7 +118,7 @@ them with 1-line reasons.]
 Any questions, reply to this doc or ping [operator name] directly.
 
 ---
-_Save this deliverable to:_ `clients/<slug>/deliverables/content/approval-[YYYY-WW].md`
+_Produce this deliverable by calling the **`generate_html_report`** tool_ (HTML). Do NOT emit a `DELIVERABLE_SAVED` marker — the tool writes the file to `clients/<slug>/deliverables/content/approval-[YYYY-WW].html` in the correct customer-facing format. (Markdown is rejected in this folder.)
 ```
 
 ## Practical formatting notes

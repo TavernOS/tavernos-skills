@@ -58,7 +58,7 @@ If the context block is empty or the slug is `_self`, grill the operator's own w
 [A single concrete action. If the operator does only one thing from this grill, it's this. Usually it's the #1 weakness's fix, but sometimes it's a different one that's easier to ship before they lose nerve.]
 
 ---
-_Save this deliverable to:_ `clients/<slug>/deliverables/reports/grill-[target-slug].md`
+_Save this deliverable to:_ `clients/<slug>/deliverables/internal/grill-[target-slug].md` (internal working artifact — markdown is correct here; this is not a client-facing deliverable).
 ```
 
 ## Tone & voice

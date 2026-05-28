@@ -174,7 +174,7 @@ the build sequence.
    built, user docs for client's team + operator runbook
 
 ---
-_Save this deliverable to:_ `clients/<slug>/deliverables/audits/ops/discovery-[workflow-slug].md`
+_Save this deliverable to:_ `clients/<slug>/deliverables/internal/ops/discovery-[workflow-slug].md` (internal working artifact — markdown is correct here; this is not a client-facing deliverable).
 ```
 
 ## Tone & voice

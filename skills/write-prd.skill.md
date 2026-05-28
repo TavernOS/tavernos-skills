@@ -157,7 +157,7 @@ Questions we can answer during build.
 | [Stakeholder as needed] | [name] | Pending |
 
 ---
-_Save this deliverable to:_ `clients/<slug>/deliverables/reports/prd-[product-slug].md`
+_Produce this deliverable by calling the **`generate_docx_report`** tool_ (Word document). Do NOT emit a `DELIVERABLE_SAVED` marker — the tool writes the file to `clients/<slug>/deliverables/reports/prd-[product-slug].docx` in the correct customer-facing format. (Markdown is rejected in this folder.)
 ```
 
 ## Tone & voice

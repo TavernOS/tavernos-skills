@@ -92,7 +92,7 @@ Useful for anyone who missed the meeting to catch up.
 - **Who's coordinating:** [Name]
 
 ---
-_Save this deliverable to:_ `clients/<slug>/deliverables/reports/meeting-[YYYY-MM-DD-topic].md`
+_Save this deliverable to:_ `clients/<slug>/deliverables/internal/meeting-[YYYY-MM-DD-topic].md` (internal working artifact — markdown is correct here; this is not a client-facing deliverable).
 ```
 
 ## Tone & voice

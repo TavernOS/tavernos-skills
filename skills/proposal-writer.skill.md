@@ -207,7 +207,7 @@ the SOW + contract for signature."**
 [Contact info]
 
 ---
-_Save this deliverable to:_ `clients/<slug>/deliverables/content/proposal-[prospect-slug].md`
+_Produce this deliverable by calling the **`generate_docx_report`** tool_ (Word document). Do NOT emit a `DELIVERABLE_SAVED` marker — the tool writes the file to `clients/<slug>/deliverables/content/proposal-[prospect-slug].docx` in the correct customer-facing format. (Markdown is rejected in this folder.)
 ```
 
 ## Tone & voice

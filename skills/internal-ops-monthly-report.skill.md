@@ -171,7 +171,7 @@ recovered time by year-end."
   workflows — team reorgs, tool migrations, policy changes]
 
 ---
-_Save this deliverable to:_ `clients/<slug>/deliverables/reports/internal-ops/monthly-report-[YYYY-MM].md`
+_Produce this deliverable by calling the **`generate_docx_report`** tool_ (Word document). Do NOT emit a `DELIVERABLE_SAVED` marker — the tool writes the file to `clients/<slug>/deliverables/reports/internal-ops/monthly-report-[YYYY-MM].docx` in the correct customer-facing format. (Markdown is rejected in this folder.)
 ```
 
 ## Tone & voice
